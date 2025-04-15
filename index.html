@@ -114,6 +114,25 @@
     </video>
 
     <!-- Logo estático que aparece al terminar el video -->
+    <img id="logo-static" src="./ECINE logo PNG.png" alt="Logo ECINE" style="width: 100%; display: none;">
+  </div>
+
+  <p>Lo que no se dice, se filma.</p>
+  <a href="#portafolio">Ver reel</a>
+</section>
+
+<script>
+  const video = document.getElementById("logo-video");
+  const image = document.getElementById("logo-static");
+
+  video.addEventListener("ended", () => {
+    video.style.display = "none";
+    image.style.display = "block";
+  });
+</script>
+
+
+    <!-- Logo estático que aparece al terminar el video -->
     <img id="logo-static" src="https://github.com/ecin3/ecine/raw/main/tu-logo.png" alt="Logo ECINE" style="width: 100%; display: none;">
   </div>
 
