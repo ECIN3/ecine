@@ -106,15 +106,11 @@
 <body>
 
 <section class="hero">
-  <!-- Contenedor del logo -->
   <div id="logo-container" style="max-width: 520px; margin: 0 auto;">
-    <video id="logo-video" autoplay muted playsinline style="width: 100%; display: block;">
+    <video id="logo-video" autoplay muted playsinline style="width: 100%; display: block;" onended="this.pause(); this.currentTime = this.duration - 0.1;">
       <source src="ecine.mp4" type="video/mp4">
       Tu navegador no soporta video HTML5.
     </video>
-
-    <!-- Logo estático que aparece al terminar el video -->
-    <img id="logo-static" src="./ecine-logo.png" alt="Logo ECINE" style="width: 100%; display: none;">
   </div>
 
   <p>Lo que no se dice, se filma.</p>
