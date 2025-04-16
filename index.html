@@ -1,198 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ECINE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ECINE — Portafolio</title>
   <style>
     body {
       margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
       background: #000;
       color: #fff;
-      font-family: 'Helvetica Neue', sans-serif;
-      overflow-x: hidden;
-    }
-
-    .hero {
-      height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
       padding: 2rem;
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
     }
 
-    .hero p {
-      font-size: 1.4rem;
-      color: #ccc;
-      margin: 1.5rem 0 2.5rem;
-      opacity: 0;
-      animation: fadeInText 3s ease forwards;
-      animation-delay: 1s;
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    .hero a {
-      color: #fff;
-      text-decoration: none;
-      border: 1px solid #fff;
-      padding: 0.8rem 2rem;
-      transition: all 0.3s ease;
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 2px;
     }
 
-    .hero a:hover {
-      background: #fff;
-      color: #000;
-      transform: scale(1.05);
+    header p {
+      color: #bbb;
+      font-size: 1.2rem;
     }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    .reel {
+      margin: 2rem 0;
     }
 
-    @keyframes fadeInText {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      to { transform: translateY(0); }
-    }
-
-    .portafolio {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 3rem;
-      padding: 4rem 2rem;
-      background: #000;
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
-      animation-delay: 2s;
-    }
-
-    .proyecto {
-      width: 300px;
-      transition: transform 0.4s ease;
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
-      animation-delay: 2.5s;
-    }
-
-    .proyecto img {
+    .reel iframe {
       width: 100%;
-      transition: transform 0.4s ease;
+      max-width: 720px;
+      height: 405px;
+      border: none;
     }
 
-    .proyecto:hover {
-      transform: scale(1.03);
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1000px;
     }
 
-    .proyecto h3 {
+    .project {
+      text-align: center;
+    }
+
+    .project img {
+      width: 100%;
+      border: 1px solid #333;
+    }
+
+    .project h3 {
       margin-top: 1rem;
       font-weight: 400;
     }
 
-    .proyecto p {
-      color: #888;
+    .project p {
       font-size: 0.9rem;
+      color: #888;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .reel iframe {
+        height: 220px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <h1>ECINE</h1>
+    <p>Lo que no se dice, se filma.</p>
+  </header>
 
-<section class="hero">
-  <div id="logo-container" style="max-width: 520px; margin: 0 auto;">
-    <video id="logo-video" autoplay muted playsinline style="width: 100%; display: block;" onended="this.pause(); this.currentTime = this.duration - 0.1;">
-      <source src="ecine.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
+  <div class="reel">
+    <iframe src="https://player.vimeo.com/video/000000000" allowfullscreen></iframe>
   </div>
 
-  <p>Lo que no se dice, se filma.</p>
-  <a href="#portafolio">Ver reel</a>
-</section>
+  <div class="grid">
+    <div class="project">
+      <a href="https://vimeo.com/tu-link1" target="_blank">
+        <img src="https://via.placeholder.com/300x170?text=Pedro+Peleador" alt="Pedro Peleador">
+      </a>
+      <h3>PEDRO PELEADOR</h3>
+      <p>Documental · 2023</p>
+    </div>
 
-<script>
-  const video = document.getElementById("logo-video");
-  const image = document.getElementById("logo-static");
+    <div class="project">
+      <a href="https://youtu.be/tu-link2" target="_blank">
+        <img src="https://via.placeholder.com/300x170?text=Viene+y+Va" alt="Viene y Va">
+      </a>
+      <h3>VIENE Y VA — OSCAR ORLI</h3>
+      <p>Videoclip · 2024</p>
+    </div>
 
-  video.addEventListener("ended", () => {
-    video.style.display = "none";
-    image.style.display = "block";
-  });
-</script>
-
-
-    <!-- Logo estático que aparece al terminar el video -->
-    <img id="logo-static" src="https://github.com/ecin3/ecine/raw/main/tu-logo.png" alt="Logo ECINE" style="width: 100%; display: none;">
+    <div class="project">
+      <a href="https://youtu.be/tu-link3" target="_blank">
+        <img src="https://via.placeholder.com/300x170?text=Rosa" alt="Rosa">
+      </a>
+      <h3>ROSA — OSCAR ORLI</h3>
+      <p>Videoclip · 2024</p>
+    </div>
   </div>
 
-  <p>Lo que no se dice, se filma.</p>
-  <a href="#portafolio">Ver reel</a>
-</section>
-
-<script>
-  const video = document.getElementById("logo-video");
-  const image = document.getElementById("logo-static");
-
-  video.addEventListener("ended", () => {
-    video.style.display = "none";
-    image.style.display = "block";
-  });
-</script>
-
-
-<section id="portafolio" class="portafolio">
-  <div class="proyecto">
-    <a href="https://vimeo.com/tu-link1" target="_blank">
-      <img src="https://via.placeholder.com/300x170?text=Pedro+Peleador" alt="Pedro Peleador">
-    </a>
-    <h3>PEDRO PELEADOR</h3>
-    <p>Documental · 2023</p>
-  </div>
-
-  <div class="proyecto">
-    <a href="https://youtu.be/tu-link2" target="_blank">
-      <img src="https://via.placeholder.com/300x170?text=Viene+y+Va" alt="Viene y Va">
-    </a>
-    <h3>VIENE Y VA — OSCAR ORLI</h3>
-    <p>Videoclip · 2024</p>
-  </div>
-
-  <div class="proyecto">
-    <a href="https://youtu.be/tu-link3" target="_blank">
-      <img src="https://via.placeholder.com/300x170?text=Rosa" alt="Rosa">
-    </a>
-    <h3>ROSA — OSCAR ORLI</h3>
-    <p>Videoclip · 2024</p>
-  </div>
-</section>
-
-<!-- SOBRE ECINE -->
-<section style="padding: 6rem 2rem; max-width: 800px; margin: 0 auto; text-align: center;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem;">Sobre ECINE</h2>
-  <p style="color: #ccc; font-size: 1.1rem; line-height: 1.6;">
-    ECINE nace del deseo de mirar, resistir y retratar lo invisible. Somos una productora independiente de Guadalajara que fusiona el cine documental con la poética visual. Nos enfocamos en contar historias humanas con estética cinematográfica, honestidad y ritmo. 
-    <br><br>
-    Creemos que cada plano puede ser una cicatriz y cada montaje, un acto de memoria.
-  </p>
-</section>
-
-<!-- CONTACTO -->
-<section style="padding: 4rem 2rem; text-align: center;">
-  <h2 style="font-size: 2rem; margin-bottom: 1rem;">Contacto</h2>
-  <p style="color: #aaa;">¿Tienes un proyecto? ¡Colaboremos!</p>
-  <div style="margin-top: 2rem;">
-    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" style="margin: 0.5rem; padding: 0.75rem 2rem; border: 1px solid #fff; text-decoration: none; color: #fff;">WhatsApp</a>
-    <a href="https://instagram.com/tuusuario" target="_blank" style="margin: 0.5rem; padding: 0.75rem 2rem; border: 1px solid #fff; text-decoration: none; color: #fff;">Instagram</a>
-    <a href="mailto:contacto@ecine.mx" style="margin: 0.5rem; padding: 0.75rem 2rem; border: 1px solid #fff; text-decoration: none; color: #fff;">Correo</a>
-  </div>
-</section>
-
+  <footer>
+    contacto@ecine.mx — <a href="https://instagram.com/tuusuario" target="_blank" style="color:#999;">Instagram</a>
+  </footer>
 </body>
 </html>
