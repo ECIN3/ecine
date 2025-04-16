@@ -7,57 +7,68 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
       background: #000;
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
+      font-family: 'Helvetica Neue', sans-serif;
+      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      padding: 3rem 2rem 1rem;
     }
 
     header h1 {
-      font-size: 3rem;
-      margin: 0;
+      font-size: 3.2rem;
       letter-spacing: 2px;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
     }
 
     header p {
-      color: #bbb;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      color: #aaa;
+      font-weight: 200;
+      font-style: italic;
     }
 
-    .reel {
-      margin: 2rem 0;
+    .video-logo {
+      max-width: 90vw;
+      width: 680px;
+      margin: 2rem auto 0;
+      animation: fadeIn 2s ease-out forwards;
     }
 
-    .reel iframe {
+    .video-logo video {
       width: 100%;
-      max-width: 720px;
-      height: 405px;
-      border: none;
+      display: block;
+      filter: brightness(0.95) contrast(1.1);
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      width: 100%;
-      max-width: 1000px;
+      padding: 4rem 2rem;
+      max-width: 1080px;
+      margin: auto;
     }
 
     .project {
       text-align: center;
+      transform: scale(0.96);
+      transition: all 0.3s ease;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
     }
 
-    .project img {
+    .project:hover {
+      transform: scale(1.025);
+    }
+
+    .project video {
       width: 100%;
-      border: 1px solid #333;
+      border: 1px solid #444;
     }
 
     .project h3 {
@@ -70,59 +81,121 @@
       color: #888;
     }
 
-    footer {
-      margin-top: 4rem;
+    section.contacto {
       text-align: center;
+      padding: 5rem 2rem 3rem;
+    }
+
+    section.contacto h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section.contacto p {
+      font-size: 1rem;
+      color: #bbb;
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
       font-size: 0.9rem;
       color: #666;
     }
 
-    @media (max-width: 768px) {
-      .reel iframe {
-        height: 220px;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
+
   <header>
     <h1>ECINE</h1>
     <p>Lo que no se dice, se filma.</p>
   </header>
 
-  <div class="reel">
-    <iframe src="https://player.vimeo.com/video/000000000" allowfullscreen></iframe>
+  <!-- LOGO VIDEO -->
+  <div class="video-logo">
+    <video id="logo-video" autoplay muted playsinline onended="this.pause(); this.currentTime = this.duration - 0.1;">
+      <source src="ecine.mp4" type="video/mp4">
+    </video>
   </div>
 
+  <!-- PORTAFOLIO CON VIDEOS -->
   <div class="grid">
+
     <div class="project">
-      <a href="https://vimeo.com/tu-link1" target="_blank">
-        <img src="https://via.placeholder.com/300x170?text=Pedro+Peleador" alt="Pedro Peleador">
+      <a href="https://vimeo.com/1054832481/08a1385ef6" target="_blank">
+        <video muted autoplay loop playsinline>
+          <source src="https://archive.org/download/pedrotrailerclip/pedrotrailerclip.mp4" type="video/mp4">
+        </video>
       </a>
       <h3>PEDRO PELEADOR</h3>
-      <p>Documental · 2023</p>
+      <p>Trailer · Documental · 2024</p>
     </div>
 
     <div class="project">
-      <a href="https://youtu.be/tu-link2" target="_blank">
-        <img src="https://via.placeholder.com/300x170?text=Viene+y+Va" alt="Viene y Va">
+      <a href="https://www.youtube.com/watch?v=PJLsHEQCLuQ" target="_blank">
+        <video muted autoplay loop playsinline>
+          <source src="https://archive.org/download/vieneclip/vieneclip.mp4" type="video/mp4">
+        </video>
       </a>
       <h3>VIENE Y VA — OSCAR ORLI</h3>
       <p>Videoclip · 2024</p>
     </div>
 
     <div class="project">
-      <a href="https://youtu.be/tu-link3" target="_blank">
-        <img src="https://via.placeholder.com/300x170?text=Rosa" alt="Rosa">
+      <a href="https://www.youtube.com/watch?v=xFw1pYJo_GI" target="_blank">
+        <video muted autoplay loop playsinline>
+          <source src="https://archive.org/download/rosaclip_202404/rosaclip.mp4" type="video/mp4">
+        </video>
       </a>
       <h3>ROSA — OSCAR ORLI</h3>
       <p>Videoclip · 2024</p>
     </div>
+
+    <div class="project">
+      <a href="https://www.youtube.com/watch?v=8A9M0nmZxFw" target="_blank">
+        <video muted autoplay loop playsinline>
+          <source src="https://archive.org/download/bjmpprsgclip/bjmpprsgclip.mp4" type="video/mp4">
+        </video>
+      </a>
+      <h3>BJ.MPP.RSG</h3>
+      <p>Videoclip · 2023</p>
+    </div>
+
+    <div class="project">
+      <a href="https://www.youtube.com/watch?v=zrzBP9Dnjgg" target="_blank">
+        <video muted autoplay loop playsinline>
+          <source src="https://archive.org/download/solclip/solclip.mp4" type="video/mp4">
+        </video>
+      </a>
+      <h3>SOL — OSCAR ORLI</h3>
+      <p>Videoclip · 2023</p>
+    </div>
+
   </div>
 
+  <!-- CONTACTO -->
+  <section class="contacto">
+    <h2>Contacto y cotizaciones</h2>
+    <p>✉️ ecin3studio@gmail.com</p>
+    <p>📞 WhatsApp / Tel: 639 106 9760</p>
+    <p>📷 Instagram: <em>próximamente...</em></p>
+  </section>
+
   <footer>
-    contacto@ecine.mx — <a href="https://instagram.com/tuusuario" target="_blank" style="color:#999;">Instagram</a>
+    ECINE — Guadalajara, MX · Todos los derechos reservados
   </footer>
+
 </body>
 </html>
