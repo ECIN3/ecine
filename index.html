@@ -19,9 +19,8 @@
     }
 
     .video-logo {
-      max-width: 750px;
+      max-width: 720px;
       margin: 4rem auto 1rem;
-      animation: fadeIn 2s ease-out forwards;
     }
 
     .video-logo video {
@@ -42,60 +41,52 @@
     }
 
     .section {
-      padding: 5rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .section h2 {
-      font-size: 2rem;
-      font-weight: 300;
-      margin-bottom: 2rem;
-      text-align: center;
-      color: #fff;
-    }
-
-    .stacked {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
-    }
-
-    .stacked-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-    }
-
-    .stacked-item img {
-      width: 100%;
-      max-width: 720px;
+    .hover-video {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 4rem;
       border-radius: 6px;
-      border: 1px solid #333;
-      box-shadow: 0 0 24px rgba(255,255,255,0.05);
-      transition: transform 0.4s ease;
     }
 
-    .stacked-item:hover img {
-      transform: scale(1.01);
+    .hover-video iframe,
+    .hover-video img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: none;
     }
 
-    .stacked-item h3 {
-      margin-top: 1rem;
+    .hover-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      z-index: 2;
+    }
+
+    .hover-video:hover iframe {
+      display: block;
+    }
+
+    .hover-video h3, .hover-video p {
+      margin: 0.6rem 0 0;
+      text-align: center;
       font-weight: 300;
     }
 
-    .stacked-item p {
+    .hover-video p {
       font-size: 0.9rem;
       color: #aaa;
-      margin-top: 0.3rem;
     }
 
     .contacto {
       text-align: center;
-      padding: 6rem 2rem 3rem;
+      padding: 4rem 2rem 2rem;
     }
 
     .contacto h2 {
@@ -116,21 +107,11 @@
       font-size: 0.8rem;
       color: #666;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
 
-  <!-- VIDEO LOGO -->
+  <!-- LOGO VIDEO -->
   <div class="video-logo">
     <video autoplay muted playsinline onended="this.pause(); this.currentTime = this.duration - 0.1;">
       <source src="ecine.mp4" type="video/mp4">
@@ -140,52 +121,30 @@
   <!-- SLOGAN -->
   <div class="slogan">Lo que no se dice, se filma.</div>
 
-  <!-- PROYECTOS -->
+  <!-- PROYECTOS CON VIDEO EN HOVER -->
   <section class="section">
-    <h2>Obras recientes</h2>
-    <div class="stacked">
 
-      <div class="stacked-item">
-        <a href="https://vimeo.com/1054832481/08a1385ef6" target="_blank">
-          <img src="https://i.vimeocdn.com/video/1764835204-0d74ec239dbd52d5f6f5732822d6ac94b6b3147d9c1cf3f8b5b5ddda6c0bce87-d_640x360" alt="Pedro Peleador">
-        </a>
-        <h3>PEDRO PELEADOR</h3>
-        <p>Trailer · Documental · 2024</p>
-      </div>
-
-      <div class="stacked-item">
-        <a href="https://www.youtube.com/watch?v=PJLsHEQCLuQ" target="_blank">
-          <img src="https://img.youtube.com/vi/PJLsHEQCLuQ/maxresdefault.jpg" alt="Viene y Va">
-        </a>
-        <h3>VIENE Y VA — OSCAR ORLI</h3>
-        <p>Videoclip · 2024</p>
-      </div>
-
-      <div class="stacked-item">
-        <a href="https://www.youtube.com/watch?v=xFw1pYJo_GI" target="_blank">
-          <img src="https://img.youtube.com/vi/xFw1pYJo_GI/maxresdefault.jpg" alt="Rosa">
-        </a>
-        <h3>ROSA — OSCAR ORLI</h3>
-        <p>Videoclip · 2024</p>
-      </div>
-
-      <div class="stacked-item">
-        <a href="https://www.youtube.com/watch?v=8A9M0nmZxFw" target="_blank">
-          <img src="https://img.youtube.com/vi/8A9M0nmZxFw/maxresdefault.jpg" alt="BJ.MPP.RSG">
-        </a>
-        <h3>BJ.MPP.RSG</h3>
-        <p>Videoclip · 2023</p>
-      </div>
-
-      <div class="stacked-item">
-        <a href="https://www.youtube.com/watch?v=zrzBP9Dnjgg" target="_blank">
-          <img src="https://img.youtube.com/vi/zrzBP9Dnjgg/maxresdefault.jpg" alt="Sol">
-        </a>
-        <h3>SOL — OSCAR ORLI</h3>
-        <p>Videoclip · 2023</p>
-      </div>
-
+    <div class="hover-video">
+      <img src="https://i.vimeocdn.com/video/1764835204-0d74ec239dbd52d5f6f5732822d6ac94b6b3147d9c1cf3f8b5b5ddda6c0bce87-d_640x360" alt="Pedro Peleador">
+      <iframe src="https://player.vimeo.com/video/1054832481?autoplay=1&muted=1&loop=1&background=1" allow="autoplay; fullscreen"></iframe>
+      <h3>PEDRO PELEADOR</h3>
+      <p>Trailer · Documental · 2024</p>
     </div>
+
+    <div class="hover-video">
+      <img src="https://img.youtube.com/vi/PJLsHEQCLuQ/maxresdefault.jpg" alt="Viene y Va">
+      <iframe src="https://www.youtube.com/embed/PJLsHEQCLuQ?autoplay=1&mute=1&loop=1&playlist=PJLsHEQCLuQ" allow="autoplay; fullscreen"></iframe>
+      <h3>VIENE Y VA — OSCAR ORLI</h3>
+      <p>Videoclip · 2024</p>
+    </div>
+
+    <div class="hover-video">
+      <img src="https://img.youtube.com/vi/xFw1pYJo_GI/maxresdefault.jpg" alt="Rosa">
+      <iframe src="https://www.youtube.com/embed/xFw1pYJo_GI?autoplay=1&mute=1&loop=1&playlist=xFw1pYJo_GI" allow="autoplay; fullscreen"></iframe>
+      <h3>ROSA — OSCAR ORLI</h3>
+      <p>Videoclip · 2024</p>
+    </div>
+
   </section>
 
   <!-- CONTACTO -->
