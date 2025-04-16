@@ -13,7 +13,7 @@
 
     body {
       margin: 0;
-      background-color: #0a0a0a;
+      background-color: #000000;
       color: #fff;
       font-family: 'Inter', sans-serif;
     }
@@ -21,7 +21,6 @@
     .video-logo {
       max-width: 800px;
       margin: 5rem auto 2rem;
-      animation: fadeIn 2s ease-out;
     }
 
     .video-logo video {
@@ -38,7 +37,6 @@
       margin-bottom: 5rem;
       font-style: italic;
       letter-spacing: 0.5px;
-      animation: fadeIn 2.5s ease-out;
     }
 
     .section {
@@ -52,7 +50,6 @@
       font-weight: 300;
       font-size: 2rem;
       margin-bottom: 3rem;
-      letter-spacing: 1px;
       color: #eee;
     }
 
@@ -136,16 +133,11 @@
       font-size: 0.8rem;
       color: #555;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
 
-  <!-- VIDEO LOGO -->
+  <!-- LOGO -->
   <div class="video-logo">
     <video autoplay muted playsinline onended="this.pause(); this.currentTime = this.duration - 0.1;">
       <source src="ecine.mp4" type="video/mp4">
@@ -155,7 +147,7 @@
   <!-- SLOGAN -->
   <div class="slogan">Lo que no se dice, se filma.</div>
 
-  <!-- OBRAS -->
+  <!-- PORTAFOLIO -->
   <section class="section">
     <h2>Obras recientes</h2>
 
@@ -170,4 +162,48 @@
     <!-- Viene y Va -->
     <div class="hover-video">
       <img src="https://img.youtube.com/vi/PJLsHEQCLuQ/maxresdefault.jpg" alt="Viene y Va">
-      <iframe src="https
+      <iframe src="https://www.youtube.com/embed/PJLsHEQCLuQ?autoplay=1&mute=1&loop=1&playlist=PJLsHEQCLuQ" allow="autoplay; fullscreen"></iframe>
+      <h3>VIENE Y VA — OSCAR ORLI</h3>
+      <p>Videoclip · 2024</p>
+    </div>
+
+    <!-- Rosa -->
+    <div class="hover-video">
+      <img src="https://img.youtube.com/vi/xFw1pYJo_GI/maxresdefault.jpg" alt="Rosa">
+      <iframe src="https://www.youtube.com/embed/xFw1pYJo_GI?autoplay=1&mute=1&loop=1&playlist=xFw1pYJo_GI" allow="autoplay; fullscreen"></iframe>
+      <h3>ROSA — OSCAR ORLI</h3>
+      <p>Videoclip · 2024</p>
+    </div>
+
+    <!-- BJ.MPP.RSG -->
+    <div class="hover-video">
+      <img src="https://img.youtube.com/vi/8A9M0nmZxFw/maxresdefault.jpg" alt="BJ.MPP.RSG">
+      <iframe src="https://www.youtube.com/embed/8A9M0nmZxFw?autoplay=1&mute=1&loop=1&playlist=8A9M0nmZxFw" allow="autoplay; fullscreen"></iframe>
+      <h3>BJ.MPP.RSG</h3>
+      <p>Videoclip · 2023</p>
+    </div>
+
+    <!-- Sol -->
+    <div class="hover-video">
+      <img src="https://img.youtube.com/vi/zrzBP9Dnjgg/maxresdefault.jpg" alt="Sol">
+      <iframe src="https://www.youtube.com/embed/zrzBP9Dnjgg?autoplay=1&mute=1&loop=1&playlist=zrzBP9Dnjgg" allow="autoplay; fullscreen"></iframe>
+      <h3>SOL — OSCAR ORLI</h3>
+      <p>Videoclip · 2023</p>
+    </div>
+
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto">
+    <h2>Contacto y cotizaciones</h2>
+    <p>✉️ ecin3studio@gmail.com</p>
+    <p>📞 WhatsApp / Tel: 639 106 9760</p>
+    <p>📷 Instagram: <em>próximamente...</em></p>
+  </section>
+
+  <footer>
+    ECINE — Guadalajara, MX · Todos los derechos reservados
+  </footer>
+
+</body>
+</html>
