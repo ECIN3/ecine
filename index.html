@@ -10,25 +10,21 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
-
     body {
       margin: 0;
-      background-color: #000000;
+      background-color: #000;
       color: #fff;
       font-family: 'Inter', sans-serif;
     }
-
     .video-logo {
       max-width: 800px;
       margin: 5rem auto 2rem;
     }
-
     .video-logo video {
       width: 100%;
       border-radius: 12px;
       box-shadow: 0 0 30px rgba(255,255,255,0.08);
     }
-
     .slogan {
       text-align: center;
       font-size: 1.5rem;
@@ -38,13 +34,11 @@
       font-style: italic;
       letter-spacing: 0.5px;
     }
-
     .section {
       padding: 4rem 2rem;
       max-width: 1100px;
       margin: auto;
     }
-
     .section h2 {
       text-align: center;
       font-weight: 300;
@@ -52,7 +46,6 @@
       margin-bottom: 3rem;
       color: #eee;
     }
-
     .hover-video {
       position: relative;
       overflow: hidden;
@@ -61,11 +54,9 @@
       transition: transform 0.3s ease;
       box-shadow: 0 0 20px rgba(255,255,255,0.03);
     }
-
     .hover-video:hover {
       transform: scale(1.01);
     }
-
     .hover-video iframe,
     .hover-video img {
       width: 100%;
@@ -74,7 +65,6 @@
       display: block;
       transition: opacity 0.7s ease;
     }
-
     .hover-video iframe {
       position: absolute;
       top: 0;
@@ -83,58 +73,48 @@
       opacity: 0;
       pointer-events: none;
     }
-
     .hover-video:hover iframe {
       opacity: 1;
     }
-
     .hover-video:hover img {
       opacity: 0;
     }
-
     .hover-video h3, .hover-video p {
       margin: 0.6rem 0 0;
       text-align: center;
       font-weight: 300;
     }
-
     .hover-video h3 {
       font-size: 1.2rem;
       margin-top: 1rem;
       color: #fff;
     }
-
     .hover-video p {
       font-size: 0.9rem;
       color: #999;
       margin-bottom: 0.3rem;
     }
-
     .creditos {
       font-size: 0.8rem;
       color: #555;
       text-align: center;
       font-style: italic;
     }
-
     .contacto {
       text-align: center;
       padding: 5rem 2rem 3rem;
       border-top: 1px solid #222;
     }
-
     .contacto h2 {
       font-size: 1.7rem;
       font-weight: 300;
       margin-bottom: 1rem;
     }
-
     .contacto p {
       font-size: 1rem;
       color: #aaa;
       margin: 0.4rem;
     }
-
     footer {
       text-align: center;
       padding: 2rem;
@@ -144,83 +124,64 @@
   </style>
 </head>
 <body>
-
-  <!-- LOGO -->
   <div class="video-logo">
     <video autoplay muted playsinline onended="this.pause(); this.currentTime = this.duration - 0.1;">
       <source src="ecine.mp4" type="video/mp4">
     </video>
   </div>
-
-  <!-- SLOGAN -->
   <div class="slogan">Lo que no se dice, se filma.</div>
-
-  <!-- PORTAFOLIO -->
   <section class="section">
     <h2>Obras recientes</h2>
 
-<!-- Pedro Peleador -->
-<div class="hover-video">
-  <img src="https://i.vimeocdn.com/video/1764835204-0d74ec239dbd52d5f6f5732822d6ac94b6b3147d9c1cf3f8b5b5ddda6c0bce87-d_640x360" alt="Pedro Peleador">
-  <iframe src="https://player.vimeo.com/video/1054832481?h=08a1385ef6&autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0" 
-          frameborder="0" 
-          allow="autoplay; fullscreen" 
-          allowfullscreen>
-  </iframe>
-  <h3>PEDRO PELEADOR</h3>
-  <p>Cortometraje Documental · 2024</p>
-  <div class="creditos">Dirección · Edición · Color · Producción — <strong>Alejandro Orli</strong></div>
-</div>
+    <div class="hover-video">
+      <img src="https://i.vimeocdn.com/video/1764835204-0d74ec239dbd52d5f6f5732822d6ac94b6b3147d9c1cf3f8b5b5ddda6c0bce87-d_640x360" alt="Pedro Peleador">
+      <iframe src="https://player.vimeo.com/video/1054832481?h=08a1385ef6&autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen"></iframe>
+      <h3>PEDRO PELEADOR (2025) – ALEJANDRO ORLI</h3>
+      <p>Cortometraje Documental</p>
+      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
+    </div>
 
-    <!-- Viene y Va -->
     <div class="hover-video">
       <img src="https://img.youtube.com/vi/PJLsHEQCLuQ/hqdefault.jpg" alt="Viene y Va">
       <iframe src="https://www.youtube.com/embed/PJLsHEQCLuQ?start=18&autoplay=1&mute=1&loop=1&playlist=PJLsHEQCLuQ" allow="autoplay; fullscreen"></iframe>
-      <h3>VIENE Y VA — ALEJANDRO ORLI</h3>
-      <p>Videoclip · 2024</p>
-      <div class="creditos">Dirección · Edición · Color · Producción — <strong>Alejandro Orli</strong></div>
+      <h3>VIENE Y VA (2024) – OSCAR ORLI</h3>
+      <p>Videoclip musical</p>
+      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
     </div>
 
-    <!-- Rosa -->
     <div class="hover-video">
       <img src="https://img.youtube.com/vi/xFw1pYJo_GI/maxresdefault.jpg" alt="Rosa">
       <iframe src="https://www.youtube.com/embed/xFw1pYJo_GI?start=15&autoplay=1&mute=1&loop=1&playlist=xFw1pYJo_GI" allow="autoplay; fullscreen"></iframe>
-      <h3>ROSA — ALEJANDRO ORLI</h3>
-      <p>Videoclip · 2024</p>
-      <div class="creditos">Dirección · Edición · Color · Producción — <strong>Alejandro Orli</strong></div>
+      <h3>ROSA (2024) – OSCAR ORLI</h3>
+      <p>Videoclip musical</p>
+      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
     </div>
 
-    <!-- BJ.MPP.RSG -->
     <div class="hover-video">
       <img src="https://img.youtube.com/vi/8A9M0nmZxFw/maxresdefault.jpg" alt="BJ.MPP.RSG">
       <iframe src="https://www.youtube.com/embed/8A9M0nmZxFw?start=10&autoplay=1&mute=1&loop=1&playlist=8A9M0nmZxFw" allow="autoplay; fullscreen"></iframe>
-      <h3>BJ.MPP.RSG</h3>
-      <p>Videoclip · 2023</p>
-      <div class="creditos">Dirección · Edición · Color · Producción — <strong>Alejandro Orli</strong></div>
+      <h3>BJ.MPP.RSG (2023) – OSCAR ORLI</h3>
+      <p>Videoclip musical</p>
+      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
     </div>
 
-    <!-- Sol -->
     <div class="hover-video">
       <img src="https://img.youtube.com/vi/zrzBP9Dnjgg/hqdefault.jpg" alt="Sol">
       <iframe src="https://www.youtube.com/embed/zrzBP9Dnjgg?start=20&autoplay=1&mute=1&loop=1&playlist=zrzBP9Dnjgg" allow="autoplay; fullscreen"></iframe>
-      <h3>SOL — ALEJANDRO ORLI</h3>
-      <p>Videoclip · 2023</p>
-      <div class="creditos">Dirección · Edición · Color · Producción — <strong>Alejandro Orli</strong></div>
+      <h3>SOL (2023) – OSCAR ORLI</h3>
+      <p>Videoclip musical</p>
+      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
     </div>
 
   </section>
-
-  <!-- CONTACTO -->
   <section class="contacto">
     <h2>Contacto y cotizaciones</h2>
     <p>✉️ ecin3studio@gmail.com</p>
     <p>📞 WhatsApp / Tel: 639 106 9760</p>
     <p>📷 Instagram: <em>próximamente...</em></p>
   </section>
-
   <footer>
     ECINE — Guadalajara, MX · Todos los derechos reservados
   </footer>
-
 </body>
 </html>
