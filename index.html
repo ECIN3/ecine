@@ -49,10 +49,11 @@
     .hover-video {
       position: relative;
       overflow: hidden;
-      margin-bottom: 4rem;
+      margin-bottom: 1rem;
       border-radius: 10px;
       transition: transform 0.3s ease;
       box-shadow: 0 0 20px rgba(255,255,255,0.03);
+      aspect-ratio: 16 / 9;
     }
     .hover-video:hover {
       transform: scale(1.01);
@@ -64,11 +65,12 @@
       border: none;
       display: block;
       transition: opacity 0.7s ease;
-    }
-    .hover-video iframe {
       position: absolute;
       top: 0;
       left: 0;
+      object-fit: cover;
+    }
+    .hover-video iframe {
       z-index: 2;
       opacity: 0;
       pointer-events: none;
@@ -79,26 +81,25 @@
     .hover-video:hover img {
       opacity: 0;
     }
-    .hover-video h3, .hover-video p {
-      margin: 0.6rem 0 0;
+    h3, p, .creditos {
       text-align: center;
       font-weight: 300;
     }
-    .hover-video h3 {
+    h3 {
       font-size: 1.2rem;
       margin-top: 1rem;
       color: #fff;
     }
-    .hover-video p {
+    p {
       font-size: 0.9rem;
       color: #999;
       margin-bottom: 0.3rem;
     }
     .creditos {
       font-size: 0.8rem;
-      color: #555;
-      text-align: center;
+      color: #777;
       font-style: italic;
+      margin-bottom: 2.5rem;
     }
     .contacto {
       text-align: center;
@@ -130,66 +131,47 @@
     </video>
   </div>
   <div class="slogan">Lo que no se dice, se filma.</div>
+
   <section class="section">
     <h2>Obras recientes</h2>
 
-<!-- Pedro Peleador -->
-<div class="hover-video">
-  <img 
-    src="https://i.vimeocdn.com/video/1764835204-0d74ec239dbd52d5f6f5732822d6ac94b6b3147d9c1cf3f8b5b5ddda6c0bce87-d_1280x720?r=pad" 
-    alt="Pedro Peleador">
-  <iframe 
-    src="https://player.vimeo.com/video/1054832481?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0" 
-    allow="autoplay; fullscreen" 
-    frameborder="0" 
-    allowfullscreen>
-  </iframe>
-  <h3>PEDRO PELEADOR (2025) – ALEJANDRO ORLI</h3>
-  <p>Cortometraje Documental</p>
-  <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
-</div>
-
+    <!-- Pedro Peleador -->
     <div class="hover-video">
-      <img src="https://img.youtube.com/vi/PJLsHEQCLuQ/hqdefault.jpg" alt="Viene y Va">
-      <iframe src="https://www.youtube.com/embed/PJLsHEQCLuQ?start=18&autoplay=1&mute=1&loop=1&playlist=PJLsHEQCLuQ" allow="autoplay; fullscreen"></iframe>
-      <h3>VIENE Y VA (2024) – OSCAR ORLI</h3>
-      <p>Videoclip musical</p>
-      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
+      <img src="https://i.vimeocdn.com/video/1764835204-0d74ec239dbd52d5f6f5732822d6ac94b6b3147d9c1cf3f8b5b5ddda6c0bce87-d_1280x720" alt="Pedro Peleador">
+      <iframe src="https://player.vimeo.com/video/1054832481?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
     </div>
+    <h3>PEDRO PELEADOR (2025) – ALEJANDRO ORLI</h3>
+    <p>Cortometraje Documental</p>
+    <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
 
-    <div class="hover-video">
-      <img src="https://img.youtube.com/vi/xFw1pYJo_GI/maxresdefault.jpg" alt="Rosa">
-      <iframe src="https://www.youtube.com/embed/xFw1pYJo_GI?start=15&autoplay=1&mute=1&loop=1&playlist=xFw1pYJo_GI" allow="autoplay; fullscreen"></iframe>
-      <h3>ROSA (2024) – OSCAR ORLI</h3>
-      <p>Videoclip musical</p>
-      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
-    </div>
-
-    <div class="hover-video">
-      <img src="https://img.youtube.com/vi/8A9M0nmZxFw/maxresdefault.jpg" alt="BJ.MPP.RSG">
-      <iframe src="https://www.youtube.com/embed/8A9M0nmZxFw?start=10&autoplay=1&mute=1&loop=1&playlist=8A9M0nmZxFw" allow="autoplay; fullscreen"></iframe>
-      <h3>BJ.MPP.RSG (2023) – OSCAR ORLI</h3>
-      <p>Videoclip musical</p>
-      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
-    </div>
-
-    <div class="hover-video">
-      <img src="https://img.youtube.com/vi/zrzBP9Dnjgg/hqdefault.jpg" alt="Sol">
-      <iframe src="https://www.youtube.com/embed/zrzBP9Dnjgg?start=20&autoplay=1&mute=1&loop=1&playlist=zrzBP9Dnjgg" allow="autoplay; fullscreen"></iframe>
-      <h3>SOL (2023) – OSCAR ORLI</h3>
-      <p>Videoclip musical</p>
-      <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
-    </div>
+    <!-- Otros videos se colocan aquí... -->
 
   </section>
+
   <section class="contacto">
     <h2>Contacto y cotizaciones</h2>
     <p>✉️ ecin3studio@gmail.com</p>
     <p>📞 WhatsApp / Tel: 639 106 9760</p>
     <p>📷 Instagram: <em>próximamente...</em></p>
   </section>
+
   <footer>
     ECINE — Guadalajara, MX · Todos los derechos reservados
   </footer>
+
+  <script>
+    document.querySelectorAll('.hover-video').forEach(container => {
+      const img = container.querySelector('img');
+      const iframe = container.querySelector('iframe');
+      container.addEventListener('mouseenter', () => {
+        iframe.style.opacity = '1';
+        img.style.opacity = '0';
+      });
+      container.addEventListener('mouseleave', () => {
+        iframe.style.opacity = '0';
+        img.style.opacity = '1';
+      });
+    });
+  </script>
 </body>
 </html>
