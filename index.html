@@ -13,15 +13,23 @@
       color: #e0d8cc; /* Color hueso */
       font-family: 'Inter', sans-serif;
     }
-    .logo-container {
+    .video-logo {
       width: 100%;
       max-width: 700px;
       margin: 4rem auto 2rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0px;
+      background-color: #000;
     }
-    .logo-container img {
+    .video-logo video {
       width: 100%;
+      height: auto;
       display: block;
-      border-radius: 12px;
+      object-fit: cover;
+      background-color: #000;
+      pointer-events: none;
+      border: none;
     }
     .slogan {
       text-align: center;
@@ -117,9 +125,12 @@
 
 <body>
 
-  <!-- LOGO FIJO -->
-  <div class="logo-container">
-    <img src="ecine-logo.jpg" alt="ECINE Logo">
+  <!-- LOGO ECINE -->
+  <div class="video-logo">
+    <video autoplay muted playsinline loop disablePictureInPicture>
+      <source src="ecine.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
   </div>
 
   <!-- SLOGAN -->
@@ -131,7 +142,7 @@
 
     <!-- Pedro Peleador -->
     <div class="hover-video">
-      <img src="pedro%20peleadorrr.jpg" alt="Pedro Peleador">
+      <img src="pedro-peleadorrr.jpg" alt="Pedro Peleador">
       <iframe src="https://player.vimeo.com/video/1054832481?background=1&autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen"></iframe>
     </div>
     <h3>PEDRO PELEADOR (2025) – ALEJANDRO ORLI</h3>
@@ -204,6 +215,4 @@
 </script>
 
 </body>
-</html>
-
 </html>
