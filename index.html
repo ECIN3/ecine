@@ -6,16 +6,20 @@
   <title>ECINE</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+    * { 
+      box-sizing: border-box; 
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       background-color: #000;
-      color: #fff;
+      color: #e6e1db;
       font-family: 'Inter', sans-serif;
     }
     .video-logo {
       max-width: 800px;
       margin: 5rem auto 2rem;
+      animation: fadeIn 2s ease forwards;
     }
     .video-logo video {
       width: 100%;
@@ -27,34 +31,32 @@
       text-align: center;
       font-size: 1.5rem;
       font-weight: 200;
-      color: #ccc;
+      color: #e6e1db;
       margin-bottom: 5rem;
       font-style: italic;
       letter-spacing: 0.5px;
+      animation: fadeIn 2.5s ease forwards;
     }
     .section {
-      padding: 4rem 2rem;
+      padding: 2rem;
       max-width: 1100px;
       margin: auto;
-    }
-    .section h2 {
-      text-align: center;
-      font-weight: 300;
-      font-size: 2rem;
-      margin-bottom: 3rem;
-      color: #eee;
+      animation: fadeIn 3s ease forwards;
     }
     .hover-video {
       position: relative;
       overflow: hidden;
-      margin-bottom: 1rem;
+      margin-bottom: 2.5rem;
       border-radius: 10px;
       transition: transform 0.3s ease;
       box-shadow: 0 0 20px rgba(255,255,255,0.03);
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16/9;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: appear 1.5s ease forwards;
     }
     .hover-video:hover {
-      transform: scale(1.01);
+      transform: scale(1.02);
     }
     .hover-video iframe,
     .hover-video img {
@@ -82,20 +84,21 @@
     h3, p, .creditos {
       text-align: center;
       font-weight: 300;
+      animation: fadeIn 3s ease forwards;
     }
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 1rem;
-      color: #fff;
+      color: #e6e1db;
     }
     p {
       font-size: 0.9rem;
-      color: #999;
+      color: #cfcac2;
       margin-bottom: 0.3rem;
     }
     .creditos {
       font-size: 0.8rem;
-      color: #777;
+      color: #b9b4ae;
       font-style: italic;
       margin-bottom: 2.5rem;
     }
@@ -103,39 +106,57 @@
       text-align: center;
       padding: 5rem 2rem 3rem;
       border-top: 1px solid #222;
+      animation: fadeIn 3s ease forwards;
     }
     .contacto h2 {
       font-size: 1.7rem;
       font-weight: 300;
       margin-bottom: 1rem;
+      color: #e6e1db;
     }
     .contacto p {
       font-size: 1rem;
-      color: #aaa;
+      color: #cfcac2;
       margin: 0.4rem;
     }
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.8rem;
-      color: #555;
+      color: #777;
+      animation: fadeIn 3s ease forwards;
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- LOGO -->
   <div class="video-logo">
     <video autoplay muted playsinline onended="this.pause(); this.currentTime = this.duration - 0.1;">
       <source src="ecine.mp4" type="video/mp4">
     </video>
   </div>
+
+  <!-- SLOGAN -->
   <div class="slogan">Lo que no se dice, se filma.</div>
 
+  <!-- PORTAFOLIO -->
   <section class="section">
-    <h2>Obras recientes</h2>
 
     <!-- Pedro Peleador -->
     <div class="hover-video">
-      <img src="https://github.com/ecin3/ecine/raw/main/pedro%20peleadorrr.jpg" alt="Pedro Peleador">
+      <img src="pedro-peleadorrr.jpg" alt="Pedro Peleador">
       <iframe src="https://player.vimeo.com/video/1054832481?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" frameborder="0" allowfullscreen></iframe>
     </div>
     <h3>PEDRO PELEADOR (2025) – ALEJANDRO ORLI</h3>
@@ -144,16 +165,16 @@
 
     <!-- Viene y Va -->
     <div class="hover-video">
-      <img src="https://github.com/ecin3/ecine/raw/main/viene-y-va.png" alt="Viene y Va">
+      <img src="viene-y-va.png" alt="Viene y Va">
       <iframe src="https://www.youtube.com/embed/PJLsHEQCLuQ?start=30&autoplay=1&mute=1&loop=1&playlist=PJLsHEQCLuQ" allow="autoplay; fullscreen"></iframe>
     </div>
     <h3>OSCAR ORLI — VIENE Y VA</h3>
     <p>Videoclip · 2024</p>
     <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
 
-    <!-- ROSA -->
+    <!-- Rosa -->
     <div class="hover-video">
-      <img src="https://img.youtube.com/vi/xFw1pYJo_GI/maxresdefault.jpg" alt="Rosa">
+      <img src="rosa.jpg" alt="Rosa">
       <iframe src="https://www.youtube.com/embed/xFw1pYJo_GI?start=42&autoplay=1&mute=1&loop=1&playlist=xFw1pYJo_GI" allow="autoplay; fullscreen"></iframe>
     </div>
     <h3>OSCAR ORLI — ROSA</h3>
@@ -162,23 +183,25 @@
 
     <!-- BJ.MPP.RSG -->
     <div class="hover-video">
-      <img src="https://img.youtube.com/vi/8A9M0nmZxFw/maxresdefault.jpg" alt="BJ.MPP.RSG">
+      <img src="bjmpprsg.jpg" alt="BJ.MPP.RSG">
       <iframe src="https://www.youtube.com/embed/8A9M0nmZxFw?start=35&autoplay=1&mute=1&loop=1&playlist=8A9M0nmZxFw" allow="autoplay; fullscreen"></iframe>
     </div>
     <h3>OSCAR ORLI — BJ.MPP.RSG</h3>
     <p>Videoclip · 2023</p>
     <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
 
-    <!-- SOL -->
+    <!-- Sol -->
     <div class="hover-video">
-      <img src="https://img.youtube.com/vi/zrzBP9Dnjgg/maxresdefault.jpg" alt="Sol">
+      <img src="sol.jpg" alt="Sol">
       <iframe src="https://www.youtube.com/embed/zrzBP9Dnjgg?start=20&autoplay=1&mute=1&loop=1&playlist=zrzBP9Dnjgg" allow="autoplay; fullscreen"></iframe>
     </div>
     <h3>OSCAR ORLI — SOL</h3>
     <p>Videoclip · 2023</p>
     <div class="creditos">Dirección · Edición · Color · Producción — Alejandro Orli</div>
+
   </section>
 
+  <!-- CONTACTO -->
   <section class="contacto">
     <h2>Contacto y cotizaciones</h2>
     <p>✉️ ecin3studio@gmail.com</p>
@@ -204,5 +227,6 @@
       });
     });
   </script>
+
 </body>
 </html>
