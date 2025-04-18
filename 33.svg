@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="48" height="48">
+  <style>
+    .text {
+      font-family: 'Agrandir Grand', sans-serif;
+      font-size: 90px;
+      font-weight: bold;
+      fill: #ff0000; /* rojo sexy */
+    }
+  </style>
+  <text x="50%" y="65%" text-anchor="middle" class="text">33</text>
+</svg>
